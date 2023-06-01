@@ -36,7 +36,7 @@ cron.schedule(cronExpression(), async () => {
   // click the text "click to reveal" in the page. the text in
   const [elem] = await page.$x("//*[contains(., 'Guichet ferm')]");
   // Click on the button
-  if (!elem) {
+  if (elem) {
     console.info(`${date.toTimeString()}l9adiya ba9a m7ansra`);
   } else {
     // Capture full page screenshot
